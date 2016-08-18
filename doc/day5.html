@@ -1,0 +1,75 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 5</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 5</h2></div><div><h3 class="subtitle"><i>Getting GitHub Set Up</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Starting GitHub
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Create a GitHub
+      </p></li><li class="step"><p>
+        We will need to SSH into our GitHub
+      </p><p>
+        Create a key on our computer and give that to the GitHub preferences for secure access
+      </p><p>
+        When we ran Rails Installer, the SSH key should have already been created for us
+      </p></li><li class="step"><p>
+        See the next procedure for how to generate the SSH key and use with GitHub
+      </p></li></ol></div><div class="procedure"><a name="d0e23"></a><p class="title"><b>Procedure&nbsp;1.2.&nbsp;
+      Generating an SSH key on Windows
+    </b></p><p>Note: Windows should have created a new SSH key when I ran Rails Installer.  However, after a brief search, I couldn't find it so I am creating a new one to use with GitHub</p><ol class="procedure" type="1"><li class="step"><p>
+        Open terminal and change to the root of the project folder
+      </p></li><li class="step"><p>
+        Enter the command: <code class="sgmltag-element">$ ssh-keygen -t rsa -b 4096 -C "kenmcortez@gmail.com</code>
+      </p></li><li class="step"><p>
+        The prompt will ask for a file to save, but just hit ENTER and use the default
+      </p></li><li class="step">
+      Enter the passphrase (and remember it because we'll need it again shortly)
+    </li></ol></div><div class="procedure"><a name="d0e42"></a><p class="title"><b>Procedure&nbsp;1.3.&nbsp;
+      Adding the SSH key to the ssh-agent
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        In the project folder, enter in the command: <code class="sgmltag-element">$ eval "$(ssh-agent -s)"</code>
+      </p></li><li class="step"><p>
+        Now add the new SSH key to the ssh-agent by entering: <code class="sgmltag-element">$ ssh-add ~/.ssh/id_rsa</code>
+      </p></li></ol></div><div class="procedure"><a name="d0e57"></a><p class="title"><b>Procedure&nbsp;1.4.&nbsp;
+      Adding the SSH key to the GitHub account
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Copy the SSH key to the clipboard by entering: <code class="sgmltag-element">$ clip &lt; ~/.ssh/id_rsa.pub</code>
+      </p></li><li class="step"><p>Got to your GitHub account &gt; "Settings" &gt; "SSH and GPG keys"</p></li><li class="step"><p>Add a meaningful title to what the key is for</p></li><li class="step"><p>Enter the key and click Add</p></li><li class="step"><p>Enter that password one more time that you should have remembered</p></li></ol></div><div class="procedure"><a name="d0e78"></a><p class="title"><b>Procedure&nbsp;1.5.&nbsp;
+      Create a New GitHub project
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Project name is the same as the name of the root folder: <code class="sgmltag-element">omr_kencortez</code>
+      </p><p>Do not initialize with a README</p></li><li class="step"><p>
+        Quick setup and choose the option for an existing repository
+      </p><p>Make sure that the SSH option is selected</p></li><li class="step"><p>Enter the command: <code class="sgmltag-element">$ git init</code> in the root of the project directory</p></li><li class="step"><p>
+        Type in and enter: <code class="sgmltag-element">$ git remote add origin git@github.com:kencortezdev/omr_kencortez.git</code>
+      </p></li><li class="step"><p>
+        And finally enter: <code class="sgmltag-element">$ git push -u origin master</code>
+      </p><p>
+        After this push, you should see the project up on GitHub
+      </p></li></ol></div><div class="procedure"><a name="d0e114"></a><p class="title"><b>Procedure&nbsp;1.6.&nbsp;
+      The GitHub Push Process
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Change the README in the root project folder to a markdown <code class="sgmltag-element">*.md</code> format
+      </p></li><li class="step"><p>
+        Delete the body and add some Markdown notes
+      </p></li><li class="step"><p>
+        Run <code class="sgmltag-element">$ git status</code>
+      </p><p>
+        It will look like you've deleted a file and added another
+      </p></li><li class="step"><p>
+        Run <code class="sgmltag-element">$ git add .</code>
+      </p><p>
+        Then run <code class="sgmltag-element">$ git status</code> again
+      </p><p>
+        Now files are staged to be added.  One should show as "new file" and one should show as "deleted"
+      </p></li><li class="step"><p>
+        Commit with <code class="sgmltag-element">git commit -am</code> and specify that you changed the README in the notes
+      </p></li><li class="step"><p>
+        This is still not up on GitHub; however, git hat the command to push up to GitHub
+      </p><p>
+        The final command you must enter is <code class="sgmltag-element">$ git push</code>
+      </p></li><li class="step"><p>The above section describes the three basic commands we will need</p><p>
+        <code class="sgmltag-element">$ git add .</code>
+      </p><p>
+        <code class="sgmltag-element">$ git commit -am "commit_notes"</code>
+      </p><p>
+        <code class="sgmltag-element">$ git push</code>
+      </p></li></ol></div></div></body></html>

@@ -1,0 +1,31 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 4</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 4</h2></div><div><h3 class="subtitle"><i>Version Control With Git</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Commit with Git
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Set up git in the command line: <code class="sgmltag-element">$ git config --global user.name "Ken Cortez"</code>
+      </p></li><li class="step"><p>
+        Verify that this is set by qurerying with the same command (without quotes) <code class="sgmltag-element">$ git config --global user.name</code>
+      </p></li><li class="step"><p>
+        Set up email and query email the same way with <code class="sgmltag-element">$ git config --global user.email "kenmcortez@yahoo.com"</code>
+      </p><p>
+        Note that I am using my Yahoo email!
+      </p></li><li class="step"><p>
+        Now cd into the project folder and run the command <code class="sgmltag-element">$ git init</code>
+      </p><p>
+        This obviously initializes git inside of our project
+      </p></li><li class="step"><p>
+        stage all files in the root dir for addition by entering
+      </p><p>
+        <code class="sgmltag-element">$ git add .</code>
+      </p></li><li class="step"><p>
+        Then commit all files with messages "m" applied to all "a" committed 
+      </p><p>
+        <code class="sgmltag-element">$ git commit -am "initial commit"</code>
+      </p><p>
+        This is just a standard for the initial commit
+      </p></li></ol></div><div class="procedure"><a name="d0e56"></a><p class="title"><b>Procedure&nbsp;1.2.&nbsp;Recover Deleted Entries</b></p><ol class="procedure" type="1"><li class="step"><p>
+        Type <code class="sgmltag-element">$ git add .</code> but do NOT commit
+      </p></li><li class="step"><p>
+        Type <code class="sgmltag-element">$ git checkout -f</code> which brings back everything
+      </p></li></ol></div></div></body></html>

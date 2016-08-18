@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 3</title>
+    <subtitle>Covers Rails New</subtitle>
+  </info>
+
+  <procedure>
+    <title>Set Up a New Rails Project</title>
+    <step>
+      <para>Go to the folder where you want your rails project</para>
+    </step>
+    <step>I have chosen <sgmltag>C:\one_month_rails\</sgmltag></step>
+    <step>
+      <para>Run the command: <sgmltag>$ rails new omr_kencortez</sgmltag></para>
+    </step>
+    <step>The setup will also run bundle insall to fetch needed gems</step>
+    <step>In the end there should be a named project folder with a bunch of directories in that file</step>
+    <step>
+      <para>
+        Move into the project folder and run the command <sgmltag>$ rails server</sgmltag>
+      </para>
+      <para>
+        This starts a little server called WEBrick and runs in the browser
+      </para>
+    </step>
+    <step>
+      <para>Access by navigating to <sgmltag>http://localhost:3000/</sgmltag></para>
+      <para>This basically means on your computer at port 3000</para>
+    </step>
+  </procedure>
+</chapter>

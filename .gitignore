@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore shell script for building DocBook XML
+/doc/xml2html.sh

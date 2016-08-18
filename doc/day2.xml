@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 2</title>
+    <subtitle>Basically, How to Go Seeking Help</subtitle>
+  </info>
+
+  <procedure>
+    <title>Command Line</title>
+    <para>Covers common commands being used in the course and recommends Zed Shaws "Command Line Crash Course"</para>
+  </procedure>
+
+
+  <procedure>
+    <title>Debugging</title>
+    <para>Covers basic debugging - ie. "Try and solve your own problems first" - ie. "Google it"</para>
+  </procedure>
+
+  <!--
+  <procedure>
+    <title></title>
+    <step>
+      <para></para>
+    </step>
+  </procedure>
+  -->
+
+</chapter>

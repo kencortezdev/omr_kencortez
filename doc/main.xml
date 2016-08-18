@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+<!ENTITY xi "http://www.w3.org/2001/XInclude">
+]>
+
+<book xmlns="&xmlns;" xmlns:xi="&xi;">
+	
+	<info>
+		<title>One Month Rails</title>
+		<subtitle>Step-by-Step Documentation on the Web App Building Project</subtitle>
+	</info>
+
+	<xi:include href="./day1.xml"/>
+</book>

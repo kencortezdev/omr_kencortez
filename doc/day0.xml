@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+	
+	<info>
+		<title>Day 0</title>
+		<subtitle></subtitle>
+	</info>
+
+
+<!--
+
+	<procedure>
+		<title>
+
+		</title>
+		<step>
+			<para>
+
+			</para>
+		</step>
+	</procedure>
+
+-->
+
+</chapter>

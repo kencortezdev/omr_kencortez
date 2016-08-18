@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+	
+	<info>
+		<title>Day 1</title>
+		<subtitle>Installing and Verifying Rails</subtitle>
+	</info>
+
+	<procedure>
+		<title>Install Rails</title>
+		<step>Go to <ulink>http://www.installrails.com/</ulink> and follow the instructions</step>
+		<step>
+			<para>Downloaded Rails Installer 3.2.2</para>
+			<para>Bundles Ruby 2.2.4p173</para>
+			<para>Bundles Rails 4.2.4</para>
+		</step>
+		<step>
+			<para>Once done installing, verify the following:</para>
+			<para>
+				<sgmltag>$ rails -v</sgmltag>
+			</para>
+			<para>
+				<sgmltag>$ ruby -v</sgmltag>
+			</para>
+		</step>
+		<step>
+			<para>The installer should have added this to <sgmltag>PATH</sgmltag></para>
+		</step>
+	</procedure>
+</chapter>

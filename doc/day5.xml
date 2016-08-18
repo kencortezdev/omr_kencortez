@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+<!ENTITY gh "GitHub">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 5</title>
+    <subtitle>Getting &gh; Set Up</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Starting &gh;
+    </title>
+
+    <step>
+      <para>
+        Create a &gh;
+      </para>
+    </step>
+
+    <step>
+      <para>
+        We will need to SSH into our &gh;
+      </para>
+      <para>
+        Create a key on our computer and give that to the &gh; preferences for secure access
+      </para>
+      <para>
+        When we ran Rails Installer, the SSH key should have already been created for us
+      </para>
+    </step>
+
+    <step>
+      <para>
+        See the next procedure for how to generate the SSH key and use with &gh;
+      </para>
+    </step>
+
+  </procedure>
+
+
+  <procedure>
+    <title>
+      Generating an SSH key on Windows
+    </title>
+
+    <para>Note: Windows should have created a new SSH key when I ran Rails Installer.  However, after a brief search, I couldn't find it so I am creating a new one to use with &gh;</para>
+
+    <step>
+      <para>
+        Open terminal and change to the root of the project folder
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Enter the command: <sgmltag>$ ssh-keygen -t rsa -b 4096 -C "kenmcortez@gmail.com</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        The prompt will ask for a file to save, but just hit ENTER and use the default
+      </para>
+    </step>
+
+    <step>
+      Enter the passphrase (and remember it because we'll need it again shortly)
+    </step>
+
+  </procedure>
+
+  <procedure>
+    <title>
+      Adding the SSH key to the ssh-agent
+    </title>
+
+    <step>
+      <para>
+        In the project folder, enter in the command: <sgmltag>$ eval "$(ssh-agent -s)"</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Now add the new SSH key to the ssh-agent by entering: <sgmltag>$ ssh-add ~/.ssh/id_rsa</sgmltag>
+      </para>
+    </step>
+
+  </procedure>
+
+
+  <procedure>
+    <title>
+      Adding the SSH key to the &gh; account
+    </title>
+
+    <step>
+      <para>
+        Copy the SSH key to the clipboard by entering: <sgmltag>$ clip &lt; ~/.ssh/id_rsa.pub</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>Got to your &gh; account > "Settings" > "SSH and GPG keys"</para>
+    </step>
+
+    <step><para>Add a meaningful title to what the key is for</para></step>
+
+    <step><para>Enter the key and click Add</para></step>
+
+    <step><para>Enter that password one more time that you should have remembered</para></step>
+
+  </procedure>
+
+
+  <procedure>
+    <title>
+      Create a New &gh; project
+    </title>
+
+    <step>
+      <para>
+        Project name is the same as the name of the root folder: <sgmltag>omr_kencortez</sgmltag>
+      </para>
+      <para>Do not initialize with a README</para>
+    </step>
+
+    <step>
+      <para>
+        Quick setup and choose the option for an existing repository
+      </para>
+      <para>Make sure that the SSH option is selected</para>
+    </step>
+
+    <step>
+      <para>Enter the command: <sgmltag>$ git init</sgmltag> in the root of the project directory</para>
+    </step>
+
+    <step>
+      <para>
+        Type in and enter: <sgmltag>$ git remote add origin git@github.com:kencortezdev/omr_kencortez.git</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        And finally enter: <sgmltag>$ git push -u origin master</sgmltag>
+      </para>
+      <para>
+        After this push, you should see the project up on &gh;
+      </para>
+    </step>
+
+  </procedure>
+
+  <procedure>
+    <title>
+      The &gh; Push Process
+    </title>
+
+    <step>
+      <para>
+        Change the README in the root project folder to a markdown <sgmltag>*.md</sgmltag> format
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Delete the body and add some Markdown notes
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Run <sgmltag>$ git status</sgmltag>
+      </para>
+      <para>
+        It will look like you've deleted a file and added another
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Run <sgmltag>$ git add .</sgmltag>
+      </para>
+      <para>
+        Then run <sgmltag>$ git status</sgmltag> again
+      </para>
+      <para>
+        Now files are staged to be added.  One should show as "new file" and one should show as "deleted"
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Commit with <sgmltag>git commit -am</sgmltag> and specify that you changed the README in the notes
+      </para>
+    </step>
+
+    <step>
+      <para>
+        This is still not up on &gh;; however, git hat the command to push up to &gh;
+      </para>
+      <para>
+        The final command you must enter is <sgmltag>$ git push</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>The above section describes the three basic commands we will need</para>
+      <para>
+        <sgmltag>$ git add .</sgmltag>
+      </para>
+      <para>
+        <sgmltag>$ git commit -am "commit_notes"</sgmltag>
+      </para>
+      <para>
+        <sgmltag>$ git push</sgmltag>
+      </para>
+    </step>
+
+  </procedure>
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+  </procedure>
+
+-->
+
+</chapter>
