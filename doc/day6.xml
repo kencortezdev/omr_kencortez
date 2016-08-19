@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 0</title>
+    <subtitle></subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Creating the Home Page
+    </title>
+    <step>
+      <para>
+        Go to the root of the project
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Run <sgmltag>$ rails server</sgmltag>
+      </para>
+      <para>
+        This will obviously need to be done whenever we are running the project off of our machine
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Received and error when running <sgmltag>$ rails server</sgmltag> from cygwin (I wonder if this is just a cygwin problem)
+      </para>
+      <para>
+        Just tried running <sgmltag>$ bundle install</sgmltag> from cygwin and seeing some new "Installing" messages
+      </para>
+      <para>
+        It is currently held up on <sgmltag>Installing pkg-config 1.1.7</sgmltag>
+      </para>
+      <para>
+        Nevermind - this worked! It just took a really long time.
+      </para>
+      <para>
+        Next time add verbose output with <sgmltag>$ bundle install -V</sgmltag>
+      </para>
+      <para>
+        Attempting to run <sgmltag>$ rails server</sgmltag> again...
+      </para>
+      <para>
+        Success! It worked!
+      </para>
+      <para>
+        Additionally, it looked like it installed a bunch of new packages.  I do not know why these were missed the last time I ran <sgmltag>$ bundle install</sgmltag> the last time with GitBash.
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Keep the server running, and in another instance of terminal, create a home page by entering <sgmltag>$ rails generate controller pages home</sgmltag>
+      </para>
+    </step>
+  </procedure>
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+    <step>
+      <para>
+
+      </para>
+    </step>
+  </procedure>
+
+-->
+
+</chapter>
