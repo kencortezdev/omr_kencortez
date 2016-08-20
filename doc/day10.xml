@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 10</title>
+    <subtitle>Adding Bootstrap Elements to the Home Page</subtitle>
+  </info>
+
+  <para>
+    At this point in the documentation, I will compeletely change the style.  Up to this point, getting set up has been very procedural and comprehensive.  From now on, there is a lot of modification to the source that will NOT be covered.  Instead, the documentation will serve as a sort of log to document the resources used in a step-wise, descriptive way.
+  </para>
+
+  <procedure>
+    <title>
+      Bootstrapping the Project
+    </title>
+
+    <para>
+      Again, this is in now way meant to be comprehensive.  The doc is now basically a bullet point log of what was accomplished on a given day to serve as a reference.
+    </para>
+
+    <step>
+      <para>
+        Added a "Container" to the app
+      </para>
+      <para>
+        This was done in <sgmltag>./views/layouts/application.html.erb</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Create a header at the "layouts level" by creating the file <sgmltag>_header.html.erb</sgmltag>
+      </para>
+      <para>
+        The underscore is quite important and basically means that this is file is going to get referenced by a "partial"
+      </para>
+      <para>
+        Link to the partial by adding embedded ruby code to the HTML in <sgmltag>./app/views/layouts/application.html.erb</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Go to <ulink>getbootstrap.com/components/#navbar</ulink> to find the code for the navbar (this will be nested in "div" tags).
+      </para>
+      <para>
+        Copy and paste a bunch of the code for the navbar in the header into the partial <sgmltag>_header.html.erb</sgmltag> and be sure to get the "div" tags along with everything inside.
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Things will still not fully work because we need to include the Bootstrap's Javascript by modifying the <sgmltag>./app/assets/javascripts/application.js</sgmltag>
+      </para>
+      <para>
+        Add the line of code: <sgmltag>//= require bootstrap-sprockets</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Grab the "viewport" code from <ulink>http://getbootstrap.com/getting-started/#template</ulink>
+      </para>
+      <para>
+        Copy the "meta" tags and everything inside for "viewport"
+      </para>
+      <para>
+        Add a "viewport" for mobile device support at <sgmltag>./views/layouts/application.html.erb</sgmltag>
+      </para>
+      <para>
+        Add the viewport code to the code at the bottom of the head tag (still inside the head tags)
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Add a div class="jumbotron" to the top of the home page
+      </para>
+      <para>
+        Go to <ulink>getbootstrap.com/css/#buttons</ulink> to get support for button customization
+      </para>
+      <para>
+        This is done for the sign up button and is done all inside of the embedded ruby in the form of an argument.
+      </para>
+    </step>
+
+  </procedure>
+
+
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>
