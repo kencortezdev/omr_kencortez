@@ -5,11 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Added "viewport" for mobile support on D10 L1-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<%= link_to "home", root_path %>
-<%= link_to "about", about_path %>
-<%= yield %>
+
+  <%= render 'layouts/header' %>
+  <!-- addid the div container on day 10 lesson 1 -->
+  <div class="container">
+    <!-- the "yield" is where all of the page content ends up -->
+    <%= yield %>
+  </div>
 
 </body>
 </html>

@@ -10,6 +10,8 @@
 		<subtitle></subtitle>
 	</info>
 
+<!-- add "procedure" -->
+
 
 <!--
 
@@ -17,11 +19,14 @@
 		<title>
 
 		</title>
+
 		<step>
 			<para>
 
 			</para>
 		</step>
+
+
 	</procedure>
 
 -->

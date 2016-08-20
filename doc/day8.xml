@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 8</title>
+    <subtitle>Consistency Across Pages</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Creating Navigation Links Using the Application Layout
+    </title>
+
+    <para>
+      Commonly, in the header of a page is a navigation bar that is consistent across multiple pages.  This section tells you how to maintain that using "Layouts".
+    </para>
+
+    <step>
+      <para>
+        Go to <sgmltag>./app/views/layouts/</sgmltag> and open <sgmltag>application.html.erb</sgmltag>
+      </para>
+      <para>
+        Add the embedded Ruby below in the "body" tag (just above where it says "yield") to the file:
+      </para>
+      <sgmltag>
+        <para>
+          &lt;%= link_to "Home", root_path %&gt;
+        </para>
+        <para>
+          &lt;%= link_to "About", about_path %&gt;
+        </para>
+      </sgmltag>
+    </step>
+    <step>
+      Navigate to the app and see that the navigation bar (with functional links) appear on both the "Home" and "About" pages.
+    </step>
+  </procedure>
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+    <step>
+      <para>
+
+      </para>
+    </step>
+  </procedure>
+
+-->
+
+</chapter>

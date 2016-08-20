@@ -1,0 +1,20 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 8</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 8</h2></div><div><h3 class="subtitle"><i></i></h3></div></div></div><div class="procedure"><a name="d0e6"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Creating Navigation Links Using the Application Layout
+    </b></p><p>
+      Commonly, in the header of a page is a navigation bar that is consistent across multiple pages.  This section tells you how to maintain that using "Layouts".
+    </p><ol class="procedure" type="1"><li class="step"><p>
+        Go to <code class="sgmltag-element">./app/views/layouts/</code> and open <code class="sgmltag-element">application.html.erb</code>
+      </p><p>
+        Add the embedded Ruby below in the "body" tag (just above where it says "yield") to the file:
+      </p><code class="sgmltag-element">
+        <p>
+          &lt;%= link_to "Home", root_path %&gt;
+        </p>
+        <p>
+          &lt;%= link_to "About", about_path %&gt;
+        </p>
+      </code></li><li class="step">
+      Navigate to the app and see that the navigation bar (with functional links) appear on both the "Home" and "About" pages.
+    </li></ol></div></div></body></html>

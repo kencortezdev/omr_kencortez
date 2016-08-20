@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 9</title>
+    <subtitle>Installing the Bootstrap Gem</subtitle>
+  </info>
+
+  <para>
+    Bootstrap is not rails specific; however, there is a gem for this.  We will be using the "bootstrap-sass" gem.
+  </para>
+
+  <procedure>
+    <title>
+      Install the "Bootstrap" front end framework
+    </title>
+    <step>
+      <para>
+        Navigate to the <sgmltag>Gemfile</sgmltag> in the project root
+      </para>
+      <para>
+        Add the following line to the file:
+      </para>
+      <para>
+        <sgmltag>
+          gem 'bootstrap-sass'
+        </sgmltag>
+      </para>
+      <para>
+        Note that a comma and version number is not specified.  The above line of code should be enough
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Navigate to the project root in the terminal and run the command: <sgmltag>$ bundle install</sgmltag>
+      </para>
+      <para>
+        Go to the app and refresh the page and get an error
+      </para>
+      <para>
+        This is because the server needs to be reinitialized because everything got frozen when we ran bundle.
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Include this gem in the "Asset Pipeline" of the application
+      </para>
+      <para>
+        Navigate to <sgmltag>./app/assets/stylesheets/</sgmltag> and create the file <sgmltag>bootstrap_and_customization.css.scss</sgmltag>
+      </para>
+      <para>
+        In that file, add the line of code:
+      </para>
+      <para>
+        <sgmltag>
+          @import 'bootstrap';
+        </sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Run <sgmltag>$ rails server</sgmltag> to re-initialize the server
+      </para>
+      <para>
+        If there is an error then run <sgmltag>$ bundle install</sgmltag> again and see if any new gems get pulled in.
+      </para>
+      <para>
+        At this point running <sgmltag>$ rails server</sgmltag> should work.
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Load up the app and see that the Bootstrap customization has taken effect by noting the different styling of the page content.
+      </para>
+    </step>
+
+
+  </procedure>
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>
