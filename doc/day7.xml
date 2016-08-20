@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 7</title>
+    <subtitle></subtitle>
+  </info>
+
+  <para>
+    Rails uses an Model View Architecture (MVC).  The model is out of the scope as of the moment.  The View and the Controller are how users interact on the front end.
+  </para>
+
+  <procedure>
+    <title>
+      The Three Step Process for Creating Pages
+    </title>
+    <para>In this section we will create an "about" page, but the same three step process can be applied generally to page creation</para>
+
+    <step>
+      <para>
+        <emphasis>Configuring the Controller</emphasis>
+      </para>
+      <para>
+        Go to ./app/pages/controllers/pages_controller.rb
+      </para>
+      <para>
+        Add the following to the class PagesController
+      </para>
+      <sgmltag>
+        <para>
+          def about
+        </para>
+        <para>
+          end
+        </para>
+      </sgmltag>
+    </step>
+
+    <step>
+      <para>
+        <emphasis>Creating the Page File</emphasis>
+      </para>
+      <para>
+        Next go to ./app/views/pages/
+      </para>
+      <para>
+        Create a file in this directory called "about.html.erb"
+      </para>
+      <para>
+        Add some well formatted HTML content to that page
+      </para>
+      <para>
+        If you now try to navigate to <ulink>localhost:3000/about</ulink> you will get a routing error (this should be a hint as to what the final step is).
+      </para>
+
+    </step>
+
+    <step>
+      <para>
+        <emphasis>Setting up the Routes</emphasis>
+      </para>
+      <para>
+        Navigate to and open ./config/routes.rb
+      </para>
+      <para>
+        Under <sgmltag>Rails.application.routes.draw do</sgmltag>, add this line of code to the ruby file:
+      </para>
+      <para>
+        <sgmltag>
+          get "about" =&gt; "pages#about"
+        </sgmltag>
+      </para>
+    </step>
+
+  </procedure>
+
+  <procedure>
+    <title>
+      First Introduction to HTML and Embedded Ruby
+    </title>
+    <step>
+      <para>
+        Modify the home file so that it contains the following under the header:
+      </para>
+      <para>
+        <sgmltag>
+          &lt;p&gt;Sign up &lt;%= link_to "here", "#" %&gt;.&lt;/p&gt;
+        </sgmltag>
+      </para>
+      <para>
+        The line containing <sgmltag>&lt;%= link_to "here", "#" %&gt;.&lt;/p&gt;</sgmltag> is embedded Ruby
+      </para>
+      <para>
+        Clearly it is a Ruby Rails function "link_to" that takes two arguments: text of the link and the path
+      </para>
+    </step>
+    <step>
+      <para>
+        Navigate to the "about" page and see that the HTML link equivalent has been generated using embedded Ruby.
+      </para>
+    </step>
+  </procedure>
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+    <step>
+      <para>
+
+      </para>
+    </step>
+  </procedure>
+
+-->
+
+</chapter>

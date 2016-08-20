@@ -6,13 +6,13 @@
 <chapter xmlns="&xmlns;">
   
   <info>
-    <title>Day 0</title>
-    <subtitle></subtitle>
+    <title>Day 6</title>
+    <subtitle>Home Page Generation (Setting the Root Path) and "Routing" with Rails</subtitle>
   </info>
 
   <procedure>
     <title>
-      Creating the Home Page
+      Creating the Home Page with Rails
     </title>
     <step>
       <para>
@@ -60,8 +60,75 @@
       <para>
         Keep the server running, and in another instance of terminal, create a home page by entering <sgmltag>$ rails generate controller pages home</sgmltag>
       </para>
+      <para>
+        Observe output like "create", "route", and "invoke"
+      </para>
+      <para>There should not be any error messages here</para>
     </step>
+
+    <step>
+      <para>
+        Run <sgmltag>$ git status</sgmltag> to see what has been added to the project
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Navigate to the new page at <sgmltag>localhost:3000/pages/home</sgmltag>
+      </para>
+      <para>Shold be a brand new page there</para>
+    </step>
+
+    <step>
+      <para>
+        From the root of the project folder, go to <sgmltag>./app/views/pages/home.html.erb</sgmltag>
+      </para>
+      <para>
+        With the server still running, make edits to the page (inside of the existing HTML tags)
+      </para>
+      <para>
+        Save the work and refresh the browser and see that the changes live!
+      </para>
+    </step>
+
   </procedure>
+
+
+  <procedure>
+    <title>
+      Redirecting the Home Page - aka "Routing"
+    </title>
+
+    <step>
+      <para>
+        Routes can be found inside of <sgmltag>./config/routs.rb</sgmltag>
+      </para>
+      <para>
+        Content in that file was created when we ran the generate command for the home page in the last chapter ("day").
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Change the first line where <sgmltag>get</sgmltag> appears to <sgmltag>root "pages#home"</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Reload the page where "home" used to be and get a routing error
+      </para>
+      <para>
+        Go to <sgmltag>localhost:3000</sgmltag> (ie. root) and observe the location of the new home page
+      </para>
+    </step>
+
+    <para>
+      The next section will cover "controllers" and "views" and, basically, explain what we did in this section.
+    </para>
+
+  </procedure>
+
 
 <!--
 

@@ -1,11 +1,11 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>Chapter&nbsp;1.&nbsp;Day 0</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 0</h2></div><div><h3 class="subtitle"><i></i></h3></div></div></div><div class="procedure"><a name="d0e6"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
-      Creating the Home Page
+   <title>Chapter&nbsp;1.&nbsp;Day 6</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 6</h2></div><div><h3 class="subtitle"><i>Home Page Generation (Setting the Root Path) and "Routing" with Rails</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Creating the Home Page with Rails
     </b></p><ol class="procedure" type="1"><li class="step"><p>
         Go to the root of the project
       </p></li><li class="step"><p>
-        Run <code class="sgmltag-element">rails server</code>
+        Run <code class="sgmltag-element">$ rails server</code>
       </p><p>
         This will obviously need to be done whenever we are running the project off of our machine
       </p></li><li class="step"><p>
@@ -14,4 +14,40 @@
         Just tried running <code class="sgmltag-element">$ bundle install</code> from cygwin and seeing some new "Installing" messages
       </p><p>
         It is currently held up on <code class="sgmltag-element">Installing pkg-config 1.1.7</code>
+      </p><p>
+        Nevermind - this worked! It just took a really long time.
+      </p><p>
+        Next time add verbose output with <code class="sgmltag-element">$ bundle install -V</code>
+      </p><p>
+        Attempting to run <code class="sgmltag-element">$ rails server</code> again...
+      </p><p>
+        Success! It worked!
+      </p><p>
+        Additionally, it looked like it installed a bunch of new packages.  I do not know why these were missed the last time I ran <code class="sgmltag-element">$ bundle install</code> the last time with GitBash.
+      </p></li><li class="step"><p>
+        Keep the server running, and in another instance of terminal, create a home page by entering <code class="sgmltag-element">$ rails generate controller pages home</code>
+      </p><p>
+        Observe output like "create", "route", and "invoke"
+      </p><p>There should not be any error messages here</p></li><li class="step"><p>
+        Run <code class="sgmltag-element">$ git status</code> to see what has been added to the project
+      </p></li><li class="step"><p>
+        Navigate to the new page at <code class="sgmltag-element">localhost:3000/pages/home</code>
+      </p><p>Shold be a brand new page there</p></li><li class="step"><p>
+        From the root of the project folder, go to <code class="sgmltag-element">./app/views/pages/home.html.erb</code>
+      </p><p>
+        With the server still running, make edits to the page (inside of the existing HTML tags)
+      </p><p>
+        Save the work and refresh the browser and see that the changes live!
+      </p></li></ol></div><div class="procedure"><a name="d0e90"></a><p class="title"><b>Procedure&nbsp;1.2.&nbsp;
+      Redirecting the Home Page - aka "Routing"
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Routes can be found inside of <code class="sgmltag-element">./config/routs.rb</code>
+      </p><p>
+        Content in that file was created when we ran the generate command for the home page in the last chapter ("day").
+      </p></li><li class="step"><p>
+        Change the first line where <code class="sgmltag-element">get</code> appears to <code class="sgmltag-element">root "pages#home"</code>
+      </p></li><li class="step"><p>
+        Reload the page where "home" used to be and get a routing error
+      </p><p>
+        Go to <code class="sgmltag-element">localhost:3000</code> (ie. root) and observe the location of the new home page
       </p></li></ol></div></div></body></html>
