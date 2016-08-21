@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 12</title>
+    <subtitle>Design Improvements</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Customize the Theme of the App
+    </title>
+
+    <step>
+      <para>
+        Get fonts from <ulink>https://fonts.google.com/</ulink> and note the <sgmltag>@import</sgmltag> line at the top of the <sgmltag>bootstrap_and_customization.css.scss</sgmltag> file
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Added classes for "center" and "navbar-brand" in the file
+      </para>
+      <para>
+        The center class was created simply to center the text
+      </para>
+      <para>
+        The navbar-brand class was created to make the font bold
+      </para>
+      <para>
+        Both classes were created for cases where there is not already an existing bootstrap "knob" to turn
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Added a button for "Log in" on the home page as <sgmltag>class: "btn btn-default btn-lg"</sgmltag>
+      </para>
+      <para>
+        Buttons for now are still stubbed out
+      </para>
+    </step>
+
+  </procedure>
+
+
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>

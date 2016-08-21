@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 11</title>
+    <subtitle>Customizing Bootstrap</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Making Tweaks in Bootstrap Instead of Modifying the CSS
+    </title>
+
+    <step>
+      <para>
+        Open up the <sgmltag>bootstrap_and_customizations.css.scss</sgmltag> file
+      </para>
+      <para>
+        Go to <ulink>http://flatuicolors.com/</ulink> to get the 3 byte HTML color codes
+      </para>
+      <para>
+        Use $ signs instead of @ signs when customizing varibles in this file.  For example: <sgmltag>$body-bg: #bdc3c7;</sgmltag>
+      </para>
+      <para>
+        For the complete list of customizations, go to: <ulink>http://getbootstrap.com/customize/</ulink> and follow the coding convention noted in the file.
+      </para>
+    </step>
+
+  </procedure>
+
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>
