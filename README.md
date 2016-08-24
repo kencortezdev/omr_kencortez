@@ -5,3 +5,4 @@ This is the omr_kencortez sample application for
 
 To Do:
 * Change default URL to actual hostname in config/environments/production.rb
+* Make sure migrations work when we move to production
