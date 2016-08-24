@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 15</title>
+    <subtitle>Generating Users with Devise</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+        Run the command <sgmltag>$ rails generate devise user</sgmltag>
+      </para>
+      <para>
+        No colons
+      </para>
+      <para>
+        To undo what you just did, just run <sgmltag>$ rails destroy devise user</sgmltag>
+      </para>
+      <para>
+        Any time you run "generate" you should also be able to run "destroy"
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Inside of the app, a user model is now added
+      </para>
+      <para>
+        A user was created, but now a migration needs to be run
+      </para>
+      <para>
+        Migrations must be run to sync the database - rails has an MVC architecture
+      </para>
+      <para>
+        The model is the thing that interacts with the Database
+      </para>
+      <para>
+        When we ran the command in the previous step, we created a "migration"
+      </para>
+      <para>
+        We need to sync the "model" with the "database" and we do this with Rails' "migrations", and we have to "run the migrations" in order to sync the database
+      </para>
+      <para>
+        Whenever we have created a model that changes the model, we must run a migration.  This is how rails works
+      </para>
+      <para>
+        The user model was created in the last step, now run <sgmltag>rake db:migrate</sgmltag>
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        I got tons of errors in the last step because my version of the Devise gem was out of date
+      </para>
+      <para>
+        Changed the gemfile to: <sgmltag>gem 'devise', '~&gt; 3.4.0' </sgmltag>
+      </para>
+      <para>
+        Then run <sgmltag>$ bundle install</sgmltag>
+      </para>
+      <para>
+        The migration file should now have the correct <sgmltag>*.rb</sgmltag> tag
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Kill the server and restart it: <sgmltag>$ rails server</sgmltag>
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Migrations only apply to one Database!
+      </para>
+      <para>
+        This works in development and not yet production (Heroku)
+      </para>
+      <para>
+        We will need to run a similar process when we do this in production
+      </para>
+    </step>
+
+
+
+  </procedure>
+
+
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>

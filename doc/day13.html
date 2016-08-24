@@ -1,0 +1,45 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 13</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 13</h2></div><div><h3 class="subtitle"><i>Pushing the App up to Heroku</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Setting Up Heroku
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Create a Heroku account and login
+      </p><p>
+        Keep this handy
+      </p></li><li class="step"><p>
+        Download the "Heroku Toolbelt" at <a class="ulink" href="" target="_top">toolbelt.heroku.com</a>
+      </p></li><li class="step"><p>
+        Once Heroku is set up, run the command <code class="sgmltag-element">$ heroku help</code> to make sure things are working
+      </p><p>
+        Had some trouble with this is Cygwin, but it'll work in GitBash or PowerShell
+      </p></li><li class="step"><p>
+        Check for SSH keys by typing <code class="sgmltag-element">$ heroku keys</code>
+      </p><p>
+        Add keys with <code class="sgmltag-element">$ heroku keys:add</code>
+      </p></li><li class="step"><p>
+        Heroku uses different database so the Gemfile will need to be modified
+      </p><p>
+        Added groups: development and test and moved sqlite3 there
+      </p><p>
+        This means we will be using the sqlite3 gem on our computer only
+      </p></li><li class="step"><p>
+        Added another group to the gemfile for production
+      </p><p>
+        Added the pg and 12factor gems for production (Heroku)
+      </p></li><li class="step"><p>
+        Ran bundle install because we modified the gemfile
+      </p><p>
+        If errors are encountered, you may have to run the command with an argument <code class="sgmltag-element">$ bundle install --without production</code>
+      </p></li><li class="step"><p>
+        Added the ruby version to the gemfile because of the bundle install warning
+      </p></li><li class="step"><p>
+        Commit the changes
+      </p></li><li class="step"><p>
+        Finally push the changes to Heroku with <code class="sgmltag-element">$ git push heroku master</code>
+      </p><p>
+        This means we want to push to Heroku and that we want to push the "Master" branch
+      </p></li><li class="step"><p>
+        Renamed the app with <code class="sgmltag-element">$ heroku rename "omr-kencortez"</code>
+      </p><p>
+        Now the app is on the web at <a class="ulink" href="" target="_top">https://omr-kencortez.herokuapp.com</a>
+      </p></li></ol></div></div></body></html>

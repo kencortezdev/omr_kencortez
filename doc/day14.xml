@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 14</title>
+    <subtitle>Using the Very Popular Devise Gem for Adding Users</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Installing devise
+    </title>
+
+    <step>
+      <para>
+        Read about the devise gem on the GitHub page
+      </para>
+      <para>
+        Add to the gem file: <sgmltag>gem 'devise', '~&gt; 3.1.0.rc2'</sgmltag>
+      </para>
+      <para>
+        Run <sgmltag>$ bundle install</sgmltag> because we've updated the Gemfile
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Run the command <sgmltag>% rails generate devise:install</sgmltag>
+      </para>
+    </step>
+
+  </procedure>
+
+  <procedure>
+    <title>
+      Devise Setup Steps
+    </title>
+
+    <para>
+      Devise setup notes are numbered and are displayed at the end of the previous procedure
+    </para>
+
+    <step>
+      <para>
+        Set up the URL defaults for development and prodocution
+      </para>
+      <para>
+        The code that is displayed in the terminal can simply be copied and pasted into the paths specified after running the installation
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Add flash message embedded ruby code in the <sgmltag>application.html.erb</sgmltag>
+      </para>
+      <para>
+        Don't forget to add the end tag at the end
+      </para>
+      <para>
+        Also note that the '=' signs are gone for the flash tag.  This is a subtlety of embedded Ruby: it <emphasis>is</emphasis> being run, but not being shown on the page
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Add a content_tag tag inside of the flash element
+      </para>
+      <para>
+        The tutorial is a bit cryptic about it and doesnt go into detail about what the embedded Ruby really does here
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Add code inside of the class application in the <sgmltag>application.rb</sgmltag> file for Heroku support (copy and paste again)
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Run the <sgmltag>$ rails g devise:views</sgmltag> generate command to generate the views
+      </para>
+      <para>
+        If successful, there should be a new folder nested in the views folder of the project
+      </para>
+    </step>
+
+  </procedure>
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>

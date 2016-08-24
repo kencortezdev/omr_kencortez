@@ -1,0 +1,37 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 14</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 14</h2></div><div><h3 class="subtitle"><i>Using the Very Popular Devise Gem for Adding Users</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Installing devise
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Read about the devise gem on the GitHub page
+      </p><p>
+        Add to the gem file: <code class="sgmltag-element">gem 'devise', '~&gt; 3.1.0.rc2'</code>
+      </p><p>
+        Run <code class="sgmltag-element">$ bundle install</code> because we've updated the Gemfile
+      </p></li><li class="step"><p>
+        Run the command <code class="sgmltag-element">% rails generate devise:install</code>
+      </p></li></ol></div><div class="procedure"><a name="d0e29"></a><p class="title"><b>Procedure&nbsp;1.2.&nbsp;
+      Devise Setup Steps
+    </b></p><p>
+      Devise setup notes are numbered and are displayed at the end of the previous procedure
+    </p><ol class="procedure" type="1"><li class="step"><p>
+        Set up the URL defaults for development and prodocution
+      </p><p>
+        The code that is displayed in the terminal can simply be copied and pasted into the paths specified after running the installation
+      </p></li><li class="step"><p>
+        Add flash message embedded ruby code in the <code class="sgmltag-element">application.html.erb</code>
+      </p><p>
+        Don't forget to add the end tag at the end
+      </p><p>
+        Also note that the '=' signs are gone for the flash tag.  This is a subtlety of embedded Ruby: it <span class="emphasis"><em>is</em></span> being run, but not being shown on the page
+      </p></li><li class="step"><p>
+        Add a content_tag tag inside of the flash element
+      </p><p>
+        The tutorial is a bit cryptic about it and doesnt go into detail about what the embedded Ruby really does here
+      </p></li><li class="step"><p>
+        Add code inside of the class application in the <code class="sgmltag-element">application.rb</code> file for Heroku support (copy and paste again)
+      </p></li><li class="step"><p>
+        Run the <code class="sgmltag-element">$ rails g devise:views</code> generate command to generate the views
+      </p><p>
+        If successful, there should be a new folder nested in the views folder of the project
+      </p></li></ol></div></div></body></html>

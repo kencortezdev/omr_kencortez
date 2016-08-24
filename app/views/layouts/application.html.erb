@@ -13,6 +13,12 @@
   <%= render 'layouts/header' %>
   <!-- addid the div container on day 10 lesson 1 -->
   <div class="container">
+    <!-- This is a "block" in Ruby -->
+    <!-- Note this does NOT have an equal sign -->
+    <!-- If you take away the equal sign, the code is still being run, but it is not shown on the page -->
+    <% flash.each do |name, msg| %>
+      <%= content_flag(:div, msg, class: "alert alert-#{name}") %>
+    <% end %>
     <!-- the "yield" is where all of the page content ends up -->
     <%= yield %>
   </div>
