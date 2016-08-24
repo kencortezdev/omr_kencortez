@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 16</title>
+    <subtitle>New User Sign up and Sign in</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Using devise for creating user sign up and sign in pages
+    </title>
+
+    <step>
+      <para>
+        Not in the routes file, there exists the line of code <sgmltag>devise_fo :users</sgmltag>
+      </para>
+      <para>
+        This will set up the routes that we need
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Run <sgmltag>$ rake routes</sgmltag> to tell you the routes available in your application
+      </para>
+      <para>
+        There should be a lot of routes created by devise and start with <sgmltag>devise/...</sgmltag>
+      </para>
+      <para>
+        These all got included with the devise gem
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Registration and login paths are defined here
+      </para>
+      <para>
+        The actual variable names will have an "_path" on the end of these routes
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        In the home page, the pathing for registration and login was updated
+      </para>
+      <para>
+        Previously we were just hashing these out
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Refreshing the page, you should be able to navigate to a meaningful sign up or log in page now
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Logic is already build into devise for email and password integrity handling
+      </para>
+      <para>
+        An example would be an email that is already taken
+      </para>
+      <para>
+        Devise handles all of this automagically
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        The flash for the content_tag should appear now that was created with embedded ruby in the views
+      </para>
+      <para>
+        Bootstrap has updated this and the second part of the string should actually be "alert alert-info" and not "alert alert-#{name}"
+      </para>
+      <para>
+        The new flash should be a prettier alert on the page
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        At this point, you realize that we shouldn't see the login and sign in buttons if we're already logged in
+      </para>
+      <para>
+        We add logic with embedded ruby to handle this
+      </para>
+      <para>
+        Look at the devise documentation/readme for devise controllerss filters and helpers
+      </para>
+      <para>
+        These are variables available to you that is created for you - ie. a "helper"
+      </para>
+      <para>
+        An example is <sgmltag>user_signed_in?</sgmltag> returns either true or false based on if the user is signed in
+      </para>
+      <para>
+        This technique is known as "Control Flow" in web dev
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        We added another link for signing out to the navbar
+      </para>
+      <para>
+        The path is again grabbed from <sgmltag>$ rake routes</sgmltag> with "_path" tacked on the end, and is <sgmltag>destroy_user_session_path</sgmltag>
+      </para>
+      <para>
+        There is more that you need in that line of code.  In order to destroy something online, you can't just create a link.
+      </para>
+      <para>
+        You must do a <sgmltag>method: :delete</sgmltag> inside of that embedded ruby code line
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Did the same thing for adding "Sign in" to the navbar
+      </para>
+      <para>
+        This was done with basic embedded Ruby on the home page
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Added some info under the "Jumbotron" to let the user know when they are signed in
+      </para>
+    </step>
+
+
+  </procedure>
+
+
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>

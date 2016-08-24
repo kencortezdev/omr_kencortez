@@ -17,7 +17,7 @@
     <!-- Note this does NOT have an equal sign -->
     <!-- If you take away the equal sign, the code is still being run, but it is not shown on the page -->
     <% flash.each do |name, msg| %>
-      <%= content_flag(:div, msg, class: "alert alert-#{name}") %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
     <% end %>
     <!-- the "yield" is where all of the page content ends up -->
     <%= yield %>

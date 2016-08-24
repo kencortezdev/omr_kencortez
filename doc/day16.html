@@ -1,0 +1,63 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 16</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 16</h2></div><div><h3 class="subtitle"><i>New User Sign up and Sign in</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Using devise for creating user sign up and sign in pages
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Not in the routes file, there exists the line of code <code class="sgmltag-element">devise_fo :users</code>
+      </p><p>
+        This will set up the routes that we need
+      </p></li><li class="step"><p>
+        Run <code class="sgmltag-element">$ rake routes</code> to tell you the routes available in your application
+      </p><p>
+        There should be a lot of routes created by devise and start with <code class="sgmltag-element">devise/...</code>
+      </p><p>
+        These all got included with the devise gem
+      </p></li><li class="step"><p>
+        Registration and login paths are defined here
+      </p><p>
+        The actual variable names will have an "_path" on the end of these routes
+      </p></li><li class="step"><p>
+        In the home page, the pathing for registration and login was updated
+      </p><p>
+        Previously we were just hashing these out
+      </p></li><li class="step"><p>
+        Refreshing the page, you should be able to navigate to a meaningful sign up or log in page now
+      </p></li><li class="step"><p>
+        Logic is already build into devise for email and password integrity handling
+      </p><p>
+        An example would be an email that is already taken
+      </p><p>
+        Devise handles all of this automagically
+      </p></li><li class="step"><p>
+        The flash for the content_tag should appear now that was created with embedded ruby in the views
+      </p><p>
+        Bootstrap has updated this and the second part of the string should actually be "alert alert-info" and not "alert alert-#{name}"
+      </p><p>
+        The new flash should be a prettier alert on the page
+      </p></li><li class="step"><p>
+        At this point, you realize that we shouldn't see the login and sign in buttons if we're already logged in
+      </p><p>
+        We add logic with embedded ruby to handle this
+      </p><p>
+        Look at the devise documentation/readme for devise controllerss filters and helpers
+      </p><p>
+        These are variables available to you that is created for you - ie. a "helper"
+      </p><p>
+        An example is <code class="sgmltag-element">user_signed_in?</code> returns either true or false based on if the user is signed in
+      </p><p>
+        This technique is known as "Control Flow" in web dev
+      </p></li><li class="step"><p>
+        We added another link for signing out to the navbar
+      </p><p>
+        The path is again grabbed from <code class="sgmltag-element">$ rake routes</code> with "_path" tacked on the end, and is <code class="sgmltag-element">destroy_user_session_path</code>
+      </p><p>
+        There is more that you need in that line of code.  In order to destroy something online, you can't just create a link.
+      </p><p>
+        You must do a <code class="sgmltag-element">method: :delete</code> inside of that embedded ruby code line
+      </p></li><li class="step"><p>
+        Did the same thing for adding "Sign in" to the navbar
+      </p><p>
+        This was done with basic embedded Ruby on the home page
+      </p></li><li class="step"><p>
+        Added some info under the "Jumbotron" to let the user know when they are signed in
+      </p></li></ol></div></div></body></html>
