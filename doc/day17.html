@@ -1,0 +1,29 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Day 17</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1"></a>Chapter&nbsp;1.&nbsp;Day 17</h2></div><div><h3 class="subtitle"><i>Pushing Users to Heroku &amp; Migration</i></h3></div></div></div><div class="procedure"><a name="d0e7"></a><p class="title"><b>Procedure&nbsp;1.1.&nbsp;
+      Production level DB Migration
+    </b></p><ol class="procedure" type="1"><li class="step"><p>
+        Make sure all changes have been pushed to production (Heroku) <code class="sgmltag-element">$ git push heroku master</code>
+      </p></li><li class="step"><p>
+        Go to the app where it lives online at <a class="ulink" href="" target="_top">http://omr-kencortez.herokuapp.com/</a>
+      </p><p>
+        Tap the "Sign in" button and observe an error
+      </p></li><li class="step"><p>
+        Open the console and run <code class="sgmltag-element">$ heroku logs --tail</code>
+      </p><p>
+        Search for the error in the stack trace
+      </p><p>
+        If the error is not immediately apparent, just reproduce the error and watch the stack trace as it spews
+      </p></li><li class="step"><p>
+        Heroku uses "pg" Postgress for its Database
+      </p><p>
+        Need to run <code class="sgmltag-element">$ heroku rake db:migrate</code>
+      </p><p>
+        Migrations that we ran in development were not part of production
+      </p><p>
+        Next time run <code class="sgmltag-element">$ heroku run rake db:migrate</code>
+      </p><p>
+        This command is harmless to run multiple times obviously
+      </p></li><li class="step"><p>
+        Actually sign up for the application live and observe that it now works after running the migration in production
+      </p></li></ol></div></div></body></html>

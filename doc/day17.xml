@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY xmlns "http://docbook.org/ns/docbook">
+]>
+
+<chapter xmlns="&xmlns;">
+  
+  <info>
+    <title>Day 17</title>
+    <subtitle>Pushing Users to Heroku &amp; Migration</subtitle>
+  </info>
+
+  <procedure>
+    <title>
+      Production level DB Migration
+    </title>
+
+    <step>
+      <para>
+        Make sure all changes have been pushed to production (Heroku) <sgmltag>$ git push heroku master</sgmltag>
+      </para>
+    </step>
+
+    <step>
+      <para>
+        Go to the app where it lives online at <ulink>http://omr-kencortez.herokuapp.com/</ulink>
+      </para>
+      <para>
+        Tap the "Sign in" button and observe an error
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Open the console and run <sgmltag>$ heroku logs --tail</sgmltag>
+      </para>
+      <para>
+        Search for the error in the stack trace
+      </para>
+      <para>
+        If the error is not immediately apparent, just reproduce the error and watch the stack trace as it spews
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Heroku uses "pg" Postgress for its Database
+      </para>
+      <para>
+        Need to run <sgmltag>$ heroku rake db:migrate</sgmltag>
+      </para>
+      <para>
+        Migrations that we ran in development were not part of production
+      </para>
+      <para>
+        Next time run <sgmltag>$ heroku run rake db:migrate</sgmltag>
+      </para>
+      <para>
+        This command is harmless to run multiple times obviously
+      </para>
+    </step>
+
+
+    <step>
+      <para>
+        Actually sign up for the application live and observe that it now works after running the migration in production
+      </para>
+    </step>
+
+  </procedure>
+
+
+<!-- add "procedure" -->
+
+
+<!--
+
+  <procedure>
+    <title>
+
+    </title>
+
+    <step>
+      <para>
+
+      </para>
+    </step>
+
+
+  </procedure>
+
+-->
+
+</chapter>
